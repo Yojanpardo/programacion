@@ -44,3 +44,34 @@ canvas{
 	border-radius: 5px;
 	border:1px solid #FFFFFF;
 }
+#menu{
+	background: #1F3A93;
+	border: 1px solid #000000;
+	text-align: left;
+}
+a{
+	padding: 5px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 15px;
+	height: 30px;
+	width: 130px;
+	margin: 10px;
+	margin-top: 30px;
+	margin-left: 0px;
+	border-radius: 5px;
+	border:1px solid #3A539B;
+	background: #3A539B;
+	box-shadow: rgb(52, 73, 94) 0px 3px;
+	transition: transform 0.2s ease-in-out 0s;
+}
+
+a:hover{
+	transform: scale(0.95);
+}
+#titulo{
+	margin: 0px;
+	color: #FFFFFF;
+	padding: 40px;
+	background: #1F3A93;
+}
