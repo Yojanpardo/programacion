@@ -3,18 +3,23 @@
 <head>
 	<meta charset="utf-8"/>
 	<script type="text/javascript" src="canvas.js"></script>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
 	<title>Canvas</title>
 </head>
 <body>
-	<h2>Canvas~</h2>
-	<input type="number" name="cantidad" id="cantidad" placeholder="cuantas lineas?">
-	<input type="button" name="boton" id="boton" value="botón">
-	<br>
-	<canvas width="300" height="300" id="canvas"></canvas>
-
+	<div id="todo">	
+		<h2>Canvas~</h2>
+		<div id="ingresar">
+			<input type="number" name="cantidad" id="cantidad" placeholder="cuantas lineas?">
+			<br>
+			<input type="button" class="boton" name="boton" id="boton1" value="lineas rectas" onclick="dibujarGrilla()">
+			<input type="button" class="boton" name="boton" id="boton2" value="lineas diagonales" onclick="dibujarGrillaDiagonal()">
+		</div>
+		<canvas width="301" height="301" id="canvas"></canvas>
+	</div>
 	<script type="text/javascript">
 		inicio();
 	</script>
-
+	<footer>Todos los derechos reservados&copy YojanPardo</footer>
 </body>
 </html>

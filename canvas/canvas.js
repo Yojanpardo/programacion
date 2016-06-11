@@ -3,13 +3,15 @@ var canvas,pincel,boton,cantidad;
 function inicio() {
 	canvas=document.getElementById('canvas');
 	pincel=canvas.getContext("2d");
-	boton=document.getElementById("boton");
+	boton1=document.getElementById("boton1");
+	boton2=document.getElementById("boton2");
 	cantidad=document.getElementById("cantidad");
 
 
 	rellenarCirculo(pincel);
 	pupila(pincel);
-	boton=addEventListener("click",dibujarGrilla,false);
+	//boton1=addEventListener("click",dibujarGrilla,false);
+	//boton2=addEventListener("click",dibujarGrillaDiagonal,false);
 }
 
 function dibujarGrilla() {
@@ -19,7 +21,6 @@ function dibujarGrilla() {
 	var desplazamiento=300/rayas;
 	var limiteX=ancho/desplazamiento;
 	var limiteY=alto/desplazamiento;
-	//var x=300;
 	p.strokeStyle="#1E824C";
 
 	for (var i=0; i<limiteX; i++){
@@ -36,29 +37,30 @@ function dibujarGrilla() {
 		p.closePath();
 		p.stroke();
 	}
-	/* para lineas diagonales;
-	for (var i = 0; i <=limiteX; i++) {
-		x=x-rayas;
-		y=300-x;
-		p.beginPath();
-		p.moveTo(x,0);
-		p.lineTo(300,y);
-		p.closePath();
-		p.stroke();
-		
-	}
+}
 
-	x=0;
-	for (var i = 0; i <=limiteX; i++) {
-		x=x+rayas;
-		y=x;
+function dibujarGrillaDiagonal() {
+	var p=pincel;
+	var lado=300;
+	var usuario=Number(cantidad.value);
+	var linea=(lado*2)/usuario;
+	var distancia=0;
+	for (var i=0;i<=usuario;i++){
 		p.beginPath();
-		p.moveTo(x,0);
-		p.lineTo(0,y);
-		p.closePath();
+		p.moveTo(distancia,0);
+		p.lineTo(0,distancia);
+		p.strokeStyle="red";
 		p.stroke();
-		
-	}*/
+		p.closePath();
+		p.beginPath();
+		p.moveTo(0,lado);
+		p.lineTo(distancia,300);
+		p.strokeStyle="green";
+		p.stroke();
+		p.closePath();
+		distancia=distancia+linea;
+		lado=lado-linea;
+	}
 }
 
 function rellenarCirculo(r) {
