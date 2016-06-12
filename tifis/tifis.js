@@ -65,6 +65,18 @@ function teclado(datos) {
 		tifis.izqOk=false;
 		tifis.derOk=false;
 		tifis.frenteOk=false;
+		if (tifis.y<0) {
+			tifis.y+=10;
+		}
+		if (tifis.y<250&&tifis.x<140&&tifis.y>200) {
+			tifis.y+=10;
+		}
+		if (tifis.y<250&&tifis.x>160&&tifis.x<240) {
+			tifis.y+=10;
+		}
+		if (tifis.y<400&&tifis.y>350&&tifis.x>110) {
+			tifis.y+=10;
+		}
 	}
 	if (datos.keyCode==40) {
 		tifis.y+=10;
@@ -72,6 +84,15 @@ function teclado(datos) {
 		tifis.atrasOk=false;
 		tifis.izqOk=false;
 		tifis.derOk=false;
+		if (tifis.y>450) {
+			tifis.y-=10;
+		}
+		if (tifis.y>150&&tifis.y<200&&tifis.x<140) {
+			tifis.y-=10;
+		}
+		if (tifis.x>110&&tifis.y>300&&tifis.y<350) {
+			tifis.y-=10;
+		}
 	}
 	if (datos.keyCode==37) {
 		tifis.x-=10;
@@ -79,6 +100,15 @@ function teclado(datos) {
 		tifis.atrasOk=false;
 		tifis.derOk=false;
 		tifis.frenteOk=false;
+		if (tifis.x<-10) {
+			tifis.x+=10
+		}
+		if (tifis.x<140 && tifis.y > 150 && tifis.y <250) {
+			tifis.x+=10;
+		}
+		if (tifis.x<240&&tifis.x>190&& tifis.y<250) {
+			tifis.x+=10;
+		}
 	}
 	if (datos.keyCode==39) {
 		tifis.x+=10;
@@ -86,6 +116,15 @@ function teclado(datos) {
 		tifis.atrasOk=false;
 		tifis.izqOk=false;
 		tifis.frenteOk=false;
+		if (tifis.x>160&&tifis.y<250 && tifis.x<210) {
+			tifis.x-=10;
+		}
+		if (tifis.x>110&&tifis.y>300&&tifis.y<400&&tifis.x) {
+			tifis.x-=10;
+		}
+		if (tifis.x>460) {
+			tifis.x-=10;
+		}
 	}
 	dibujar();
 }
