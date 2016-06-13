@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prototype</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="ahorcado.css">
+	<script type="text/javascript">
+		var Mascota=function (n,v,i) {
+			this.nombre=n;
+			this.voz=v;
+			this.img=i;
+		}
+		Mascota.prototype.mostrar=function () {
+			imagen=document.getElementById("imagen");
+			animal=document.getElementById('animal');
+			animal.innerText=(this.nombre+" dice: "+this.voz);
+			imagen.innerHTML=("<img src="+this.img+">");
+		}
+		var perro=new Mascota("Venus","wouf!","assets/venus.jpg");
+		var gato=new Mascota("Mich","Los humanos son mis esclavos","assets/mich.jpg");
+	</script>
+</head>
+<body>
+	<h1 id="titulo">Gatos y perros</h1>
+	<p id="animal"></p>
+	<div id="imagen"></div>
+	<input type="button" name="gato" value="Gatos" class="boton" id="gato" onclick="gato.mostrar()">
+	<input type="button" name="perro" value="Perros" class="boton" id="perro" onclick="perro.mostrar()">
+</body>
+</html>
