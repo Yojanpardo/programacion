@@ -42,10 +42,10 @@ canvas{
 .boton:hover{
 	transform: scale(0.95);
 }
-#cantidad{
+#cantidad, #palabra{
 	font-size: 25px;
 	height: 30px;
-	width: 190px;
+	width: 200px;
 	border-radius: 5px;
 	border:1px solid #FFFFFF;
 }

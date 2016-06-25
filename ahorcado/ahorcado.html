@@ -13,10 +13,17 @@
 		<canvas width="500" height="500" id="canvas"></canvas>
 	</div>
 	<div id="contenedor2">
-		<input type="text" name="letras" id="cantidad" placeholder="Ingresa una letra"/>
+		
+		<input type="text" name="palabra" id="palabra" placeholder="Ingresa la palabra"/>
+		<input type="button" name="seleccionar" id="seleccionar" value="Seleccionar" class="boton" onclick="seleccionarPalabra()">
 		<br>
+		<br>
+		<input type="text" name="letras" id="cantidad" placeholder="Ingresa una letra"/>
 		<input type="button" name="boton" id="boton" class="boton" value="Enviar!">
-		<h2>_ _ _ _ _ _</h2>
+		<h2 id="insertar">_ _ _ _ _ _</h2>
 	</div>
+	<script type="text/javascript">
+		iniciar();
+	</script>
 </body>
 </html>
