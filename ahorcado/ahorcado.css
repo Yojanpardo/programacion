@@ -90,16 +90,16 @@ p{
 	float: left;
 	text-align: right;
 	height: 100%;
-	width: 60%;
+	width: 70%;
 }
 #contenedor2{
 	margin-top: 200px;
 	float: right;
 	text-align: left;
 	height: 100%;
-	width: 40%;
+	width: 30%;
 }
 h2{
-	margin:50px;
+	margin-top:50px;
 	font-size: 50px;
 }
